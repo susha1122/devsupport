@@ -1,0 +1,525 @@
+{
+    "title": "Client Requirement Questionnaire",
+    "version": "1.1",
+    "language": "en",
+    "sections": [
+        {
+            "id": "1_project_overview",
+            "title": "Project Overview",
+            "questions": [
+                {
+                    "id": "1.1",
+                    "label": "Project Title",
+                    "input_type": "text",
+                    "explanation": "A short name for your project. Use a brand or working title so we can identify it easily."
+                },
+                {
+                    "id": "1.2",
+                    "label": "Project Description",
+                    "input_type": "textarea",
+                    "explanation": "Write a brief summary of what the project does and why. One or two short paragraphs are enough."
+                },
+                {
+                    "id": "1.3",
+                    "label": "Primary Purpose / Goal",
+                    "input_type": "dropdown",
+                    "options": [
+                        "Informational platform",
+                        "E-commerce",
+                        "SaaS product",
+                        "Internal business tool",
+                        "Mobile application",
+                        "API development",
+                        "Automation tool",
+                        "Other"
+                    ],
+                    "explanation": "Choose the main objective of the project. This guides key technical and design decisions."
+                },
+                {
+                    "id": "1.4",
+                    "label": "Target Audience / End Users",
+                    "input_type": "textarea",
+                    "explanation": "Describe who will use the app (age, role, experience). Different users need different features and design."
+                }
+            ]
+        },
+        {
+            "id": "2_scope_functional",
+            "title": "Scope & Functional Requirements",
+            "questions": [
+                {
+                    "id": "2.1",
+                    "label": "Required Features",
+                    "input_type": "textarea",
+                    "explanation": "List the main features the app must have. Say what each feature does in 1-2 sentences."
+                },
+                {
+                    "id": "2.2",
+                    "label": "Feature Priority List",
+                    "input_type": "radio_then_text",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "child_label": "Please describe feature priority details",
+                    "explanation": "Tell us if some features are more important. If yes, give the priority order so we can schedule work."
+                },
+                {
+                    "id": "2.3",
+                    "label": "User Authentication Methods",
+                    "input_type": "multiselect",
+                    "options": [
+                        "Email & Password",
+                        "Mobile OTP",
+                        "Social Login (Google/Facebook)",
+                        "SSO",
+                        "OAuth 2.0",
+                        "No Login"
+                    ],
+                    "explanation": "Pick how users will sign in. Different methods need different security and setup."
+                },
+                {
+                    "id": "2.4",
+                    "label": "Role-Based Access / Permissions",
+                    "input_type": "radio_then_text",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "child_label": "Provide detailed role definitions",
+                    "explanation": "Say if different users have different access (for example: Admin, Manager, User). If yes, describe each role."
+                }
+            ]
+        },
+        {
+            "id": "3_platform_tech",
+            "title": "Platform & Technology Requirements",
+            "questions": [
+                {
+                    "id": "3.1",
+                    "label": "Type of Development Required",
+                    "input_type": "multiselect",
+                    "options": [
+                        "Web Application",
+                        "Mobile App (Android)",
+                        "Mobile App (iOS)",
+                        "Hybrid App (Flutter/React Native)",
+                        "Desktop Application",
+                        "Backend/API",
+                        "Full-stack"
+                    ],
+                    "explanation": "Choose where the app will run. This affects which tools and developers we need."
+                },
+                {
+                    "id": "3.2",
+                    "label": "Preferred Technology Stack",
+                    "input_type": "dropdown_with_custom",
+                    "options": [
+                        "No preference",
+                        "MERN",
+                        "MEAN",
+                        "LAMP",
+                        ".NET / C#",
+                        "Java / Spring",
+                        "Python / Django/Flask",
+                        "Flutter/React Native",
+                        "Other"
+                    ],
+                    "custom_label": "Enter your preferred technology",
+                    "explanation": "If you prefer specific technologies mention them. If not, leave as 'No preference' and we will recommend the best fit."
+                },
+                {
+                    "id": "3.3",
+                    "label": "Third-Party Services / API Integrations",
+                    "input_type": "radio_then_list",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "child_label": "List required APIs",
+                    "explanation": "Tell us if the app needs to connect with services like payment gateways, SMS, maps, or others. List those services if yes."
+                }
+            ]
+        },
+        {
+            "id": "4_uiux_design",
+            "title": "UI/UX & Design Requirements",
+            "questions": [
+                {
+                    "id": "4.1",
+                    "label": "Brand Guidelines (Logo, Colors, Fonts)",
+                    "input_type": "radio_then_file",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "child_label": "Upload brand guideline files",
+                    "explanation": "If you have a logo, colors, or fonts, upload them. This keeps the app consistent with your brand."
+                },
+                {
+                    "id": "4.2",
+                    "label": "Preferred UI Style",
+                    "input_type": "dropdown",
+                    "options": [
+                        "Minimalistic",
+                        "Modern",
+                        "Corporate",
+                        "Creative",
+                        "Dark",
+                        "Light",
+                        "No preference"
+                    ],
+                    "explanation": "Pick a visual style you like. Sharing examples helps designers match your taste."
+                },
+                {
+                    "id": "4.3",
+                    "label": "Wireframes or Prototypes Needed",
+                    "input_type": "radio",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "explanation": "Wireframes are simple page layouts. They help avoid misunderstandings before building the app."
+                },
+                {
+                    "id": "4.4",
+                    "label": "Reference Websites or Apps",
+                    "input_type": "textarea",
+                    "explanation": "Share links to sites or apps you like. This shows the look, feel, or features you expect."
+                }
+            ]
+        },
+        {
+            "id": "5_content",
+            "title": "Content Requirements",
+            "questions": [
+                {
+                    "id": "5.1",
+                    "label": "Will you provide content (text/images/videos)?",
+                    "input_type": "radio",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Need help"
+                    ],
+                    "explanation": "Let us know if you will supply content, or if you want our team to create it."
+                },
+                {
+                    "id": "5.2",
+                    "label": "Content Writing or SEO Support",
+                    "input_type": "multiselect",
+                    "options": [
+                        "Website content",
+                        "Technical docs",
+                        "SEO optimization",
+                        "Blog/Articles",
+                        "Not required"
+                    ],
+                    "explanation": "Select the content services you need. SEO helps people find your site."
+                }
+            ]
+        },
+        {
+            "id": "6_deployment_hosting",
+            "title": "Deployment & Hosting",
+            "questions": [
+                {
+                    "id": "6.1",
+                    "label": "Hosting Preference",
+                    "input_type": "dropdown_with_conditional",
+                    "options": [
+                        "Cloud provider",
+                        "Client's server",
+                        "Shared hosting",
+                        "Not decided"
+                    ],
+                    "conditional_option": "Cloud provider",
+                    "child_type": "dropdown",
+                    "child_label": "Select Cloud Provider",
+                    "child_options": [
+                        "AWS",
+                        "Google Cloud",
+                        "Azure",
+                        "DigitalOcean",
+                        "Linode",
+                        "Other"
+                    ],
+                    "explanation": "Where you want the app to live affects cost, speed, and maintenance."
+                },
+                {
+                    "id": "6.3a",
+                    "label": "Do you already have a domain?",
+                    "input_type": "radio",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "explanation": "Tell us if you already own a domain name so we can plan DNS and hosting integration."
+                },
+                {
+                    "id": "6.3b",
+                    "label": "Do you need an SSL certificate?",
+                    "input_type": "radio",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "explanation": "SSL ensures your website is secure and encrypted (shows the lock icon)."
+                }
+            ]
+        },
+        {
+            "id": "7_database_storage",
+            "title": "Database & Storage Requirements",
+            "questions": [
+                {
+                    "id": "7.1",
+                    "label": "Preferred Database Type",
+                    "input_type": "dropdown",
+                    "options": [
+                        "No preference",
+                        "SQL (MySQL/Postgres)",
+                        "NoSQL (MongoDB/Firebase)",
+                        "Other"
+                    ],
+                    "explanation": "Choose SQL for structured data or NoSQL for flexible data. If unsure, pick 'No preference'."
+                },
+                {
+                    "id": "7.2",
+                    "label": "Estimated Storage Needs",
+                    "input_type": "dropdown",
+                    "options": [
+                        "< 5 GB",
+                        "5-50 GB",
+                        "50-200 GB",
+                        "200+ GB",
+                        "Not sure"
+                    ],
+                    "explanation": "Estimate how much storage your app will use. This helps pick the right hosting plan."
+                }
+            ]
+        },
+        {
+            "id": "8_performance_security",
+            "title": "Performance, Scalability & Security",
+            "questions": [
+                {
+                    "id": "8.1",
+                    "label": "Expected Concurrent Users",
+                    "input_type": "dropdown",
+                    "options": [
+                        "< 100",
+                        "100-1,000",
+                        "1,000-10,000",
+                        "10,000+",
+                        "Not sure"
+                    ],
+                    "explanation": "How many users might use the app at the same time. This affects server size and architecture."
+                },
+                {
+                    "id": "8.2",
+                    "label": "Is high scalability required?",
+                    "input_type": "radio",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Maybe"
+                    ],
+                    "explanation": "If you expect big growth, we design the system so it can grow without major rewrites."
+                },
+                {
+                    "id": "8.3",
+                    "label": "Performance Expectations",
+                    "input_type": "multiselect",
+                    "options": [
+                        "Fast loading (<2s)",
+                        "Real-time updates",
+                        "Heavy computations",
+                        "Data analytics support"
+                    ],
+                    "explanation": "Pick the performance goals you care about so we can optimise correctly."
+                },
+                {
+                    "id": "8.4",
+                    "label": "Security & Compliance Requirements",
+                    "input_type": "multiselect",
+                    "options": [
+                        "GDPR",
+                        "HIPAA",
+                        "PCI-DSS",
+                        "ISO",
+                        "Basic security only",
+                        "Not sure"
+                    ],
+                    "explanation": "Select any legal or security standards your app must meet, so we build the right protections."
+                }
+            ]
+        },
+        {
+            "id": "9_integration_automation",
+            "title": "Integration, Automation & Special Requirements",
+            "questions": [
+                {
+                    "id": "9.1",
+                    "label": "Automation Needs",
+                    "input_type": "multiselect",
+                    "options": [
+                        "Email automation",
+                        "Notifications",
+                        "Scheduled tasks (cron)",
+                        "Data scraping",
+                        "CI/CD pipeline",
+                        "None"
+                    ],
+                    "explanation": "Choose background tasks or automation the app should perform. This improves efficiency."
+                },
+                {
+                    "id": "9.2",
+                    "label": "AI / Machine Learning Requirements",
+                    "input_type": "radio_then_text",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Maybe"
+                    ],
+                    "child_label": "Describe the AI/ML features",
+                    "explanation": "If you want features like recommendations, chatbots, or predictions, describe them briefly."
+                }
+            ]
+        },
+        {
+            "id": "10_timeline_milestones",
+            "title": "Timeline & Milestones",
+            "questions": [
+                {
+                    "id": "10.1",
+                    "label": "Expected Project Start Date",
+                    "input_type": "date",
+                    "explanation": "Choose the date when you want development to begin. This helps with resource planning."
+                },
+                {
+                    "id": "10.2",
+                    "label": "Desired Completion Timeline",
+                    "input_type": "dropdown",
+                    "options": [
+                        "1-2 weeks",
+                        "2-4 weeks",
+                        "1-2 months",
+                        "3-6 months",
+                        "Flexible"
+                    ],
+                    "explanation": "Select how quickly you want the project finished. This affects scope and team size."
+                },
+                {
+                    "id": "10.3",
+                    "label": "Do you want an MVP (phased delivery)?",
+                    "input_type": "radio",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "explanation": "An MVP is a small version with core features to launch faster and get feedback."
+                }
+            ]
+        },
+        {
+            "id": "11_budget_resources",
+            "title": "Budget & Resources",
+            "questions": [
+                {
+                    "id": "11.1",
+                    "label": "Budget Range",
+                    "input_type": "dropdown",
+                    "options": [
+                        "< $1,000",
+                        "$1,000-$5,000",
+                        "$5,000-$10,000",
+                        "$10,000-$50,000",
+                        "$50,000+",
+                        "Not decided"
+                    ],
+                    "explanation": "Your budget helps us recommend realistic technologies and features that fit the cost."
+                },
+                {
+                    "id": "11.2",
+                    "label": "Ongoing Maintenance Needed",
+                    "input_type": "dropdown",
+                    "options": [
+                        "Monthly",
+                        "Quarterly",
+                        "Yearly",
+                        "No",
+                        "Not sure"
+                    ],
+                    "explanation": "Tell us if you want support after launch for updates, bug fixes, and backups."
+                }
+            ]
+        },
+        {
+            "id": "12_communication",
+            "title": "Communication & Collaboration",
+            "questions": [
+                {
+                    "id": "12.1",
+                    "label": "Preferred Communication Channels",
+                    "input_type": "multiselect",
+                    "options": [
+                        "Email",
+                        "WhatsApp",
+                        "Slack",
+                        "Teams",
+                        "Zoom/Meet",
+                        "Phone"
+                    ],
+                    "explanation": "Pick how you prefer to receive updates and hold meetings."
+                },
+                {
+                    "id": "12.2",
+                    "label": "Main Point of Contact",
+                    "input_type": "text",
+                    "explanation": "Provide the name and contact of one person who will make decisions and answer questions."
+                }
+            ]
+        },
+        {
+            "id": "13_legal_compliance",
+            "title": "Legal & Compliance",
+            "questions": [
+                {
+                    "id": "13.1",
+                    "label": "Do you require an NDA?",
+                    "input_type": "radio",
+                    "options": [
+                        "Yes",
+                        "No"
+                    ],
+                    "explanation": "If your project is sensitive, we will sign an NDA to protect your information."
+                },
+                {
+                    "id": "13.2",
+                    "label": "Licensing or Regulatory Requirements",
+                    "input_type": "textarea",
+                    "explanation": "Describe any laws or licenses that affect your project (for example: healthcare rules, finance regulations)."
+                }
+            ]
+        },
+        {
+            "id": "14_additional",
+            "title": "Additional Information",
+            "questions": [
+                {
+                    "id": "14.1",
+                    "label": "Additional Notes or Special Instructions",
+                    "input_type": "textarea",
+                    "explanation": "Use this space for anything else we should know that does not fit above."
+                },
+                {
+                    "id": "14.2",
+                    "label": "Upload Supporting Documents",
+                    "input_type": "file_upload",
+                    "explanation": "Attach sketches, specs, spreadsheets, or examples that help explain the project."
+                }
+            ]
+        }
+    ]
+}
